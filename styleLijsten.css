@@ -4,7 +4,7 @@
     display: flex;
     margin: 0 auto;
     padding: 10px 0;
-    margin-bottom: 250px;
+    margin-bottom: 150px;
 }
 
 .Account{
@@ -98,4 +98,5 @@ span.psw {
 .AddLijst{
     margin-left: 45%;
     margin-right: 45%;
+    margin-bottom: 100px;
 }
