@@ -94,7 +94,7 @@ span.psw {
     margin-left: 500px;
 }
 
-.AddLijst a:link , a:visited{
+.AddLijst a:link, a:visited{
     margin-left: 45%;
     margin-right: 45%;
     margin-bottom: 100px;
@@ -105,4 +105,3 @@ span.psw {
     text-decoration: none;
     display: inline-block;
 }
-
