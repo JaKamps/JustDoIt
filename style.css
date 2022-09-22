@@ -87,15 +87,16 @@ span.psw {
     }
 }
 
-.rectangle {
-    height: 150px;
-    width: 125px;
-    background-color: #feff9c;
-    margin-top: 25px;
-    margin-left: 500px;
+.WelkomTekst{
+    text-align: center;
+    border: solid;
+    margin-right: 38.5%;
+    margin-left: 38.5%;
 }
 
-.AddLijst{
-    margin-left: 45%;
-    margin-right: 45%;
+.SubTekst{
+    text-align: center;
+    border: solid;
+    margin-right: 38.5%;
+    margin-left: 38.5%;
 }
