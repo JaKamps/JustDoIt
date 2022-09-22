@@ -34,16 +34,15 @@ a:hover{
     transition: background-color 0.5s, color 0.5s;
 }
 
-body {font-family: Arial, Helvetica, sans-serif;}
-form {border: 3px solid #f1f1f1;}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url("IMG/achtergrond.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
 
-input[type=text], input[type=password] {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
+form {
+    border: 3px solid #f1f1f1;
 }
 
 button {
@@ -95,8 +94,15 @@ span.psw {
     margin-left: 500px;
 }
 
-.AddLijst{
+.AddLijst a:link , a:visited{
     margin-left: 45%;
     margin-right: 45%;
     margin-bottom: 100px;
+    background-color: #196ffa;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
 }
+
