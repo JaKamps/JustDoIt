@@ -5,6 +5,7 @@
     margin: 0 auto;
     padding: 10px 0;
     margin-bottom: 250px;
+    border-radius: 12px;
 }
 
 .Account{
@@ -31,6 +32,7 @@ a:hover{
     padding: 16px;
     font-size: 17px;
     border: none;
+    border-radius: 12px;
     transition: background-color 0.5s, color 0.5s;
 }
 
@@ -39,6 +41,7 @@ body {
     background-image: url("IMG/achtergrond.png");
     background-size: 100%;
     background-repeat: no-repeat;
+    background-color: rgba(255,255,255, 0.1);
 }
 
 form {
@@ -78,6 +81,7 @@ button:hover {
     padding: 16px;
     width: 700px;
     margin-left: 28%;
+    color: orangered;
 }
 
 span.psw {
