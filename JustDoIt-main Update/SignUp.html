@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
     <meta charset="UTF-8">
     <title>Sign up</title>
     <link rel="stylesheet" href="Signup.css">
@@ -16,25 +17,24 @@
     </header>
 
 <div class="container2">
-    <form action="signup.php" method="post">
-        <label><b>Gebruikersnaam</b></label>
-        <input type="text" id="name" name="name">
+    <label><b>Gebruikersnaam</b></label>
+    <input type="text" id="name" name="name">
 
-        <label><b>Email</b></label>
-        <input type="email" id="email" name="email">
+    <label><b>Email</b></label>
+    <input type="text" id="email" name="email">
 
-        <label><b>Volledige naam</b></label>
-        <input type="text" id="naam" name="vNaam">
+    <label><b>Volledige naam</b></label>
+    <input type="text" id="naam" name="naam">
 
-        <label><b>Wachtwoord</b></label>
-        <input type="password" name="psw">
+    <label><b>Wachtwoord</b></label>
+    <input type="password" name="psw">
 
-        <label><b>Herhaal wachtwoord</b></label>
-        <input type="password" name="pswr">
+    <label><b>Herhaal wachtwoord</b></label>
+    <input type="password" name="psw">
 
-        <button type="submit" name="submit">Registreer</button>
-        <button type="button" class="inlogbtn" onclick="window.location.href='Accounts.html';" >Heb je al een account?</button>
-    </form>
+    <button id="submit" onclick="window.location.href='index.html';">Registreer</button>
+    <button type="button" class="inlogbtn" onclick="window.location.href='Accounts.html';" >Heb je al een account?</button>
+
 </div>
 
 </body>
