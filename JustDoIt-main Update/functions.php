@@ -1,6 +1,5 @@
 <?php
 
-
 function emptyInputSignup($uName, $email, $vName, $password, $passwordR) {
     $result;
     if(empty($uName)) || empty($email) || empty($vName) || empty($password) || empty($passwordR) {

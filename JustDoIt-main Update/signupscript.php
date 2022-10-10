@@ -34,8 +34,6 @@ if(isset($_post["submit"])){
     }
 
 
-
-
     createUser($conn, $uName, $vName, $email, $password);
 }
 else {
