@@ -1,41 +1,48 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Sign up</title>
-    <link rel="stylesheet" href="Signup.css">
-</head>
-<body>
-    <header>
-        <div class="navbar">
-            <div class="Home"><a href="index.html">Home</a></div>
-            <div class="Lijst"><a href="Lijsten.html" class="navdrop">Lijsten</a></div>
-            <div class="Account"><a href="Accounts.html">Account</a></div>
-            
-        </div>
-    </header>
+<?php
+// function JSC($input){
+//     echo "<pre>";
+//     print_r($input);
+//     echo "</pre>";
+// }
+// JSC($_POST);
+if (isset($_POST["submit"])) {
 
-<div class="container2">
-    <form action="signup.php" method="post">
-        <label><b>Gebruikersnaam</b></label>
-        <input type="text" id="name" name="name">
+    $uName = $_POST["name"];
+    $email = $_POST["email"];
+    $vName = $_POST["vNaam"];
+    $password = $_POST["psw"];
+    $passwordR = $_POST["pswr"];
 
-        <label><b>Email</b></label>
-        <input type="email" id="email" name="email">
+    require_once 'connection.php';
+    require_once 'functions.php';
+    
+    if(emptyInputSignup($uName, $email, $vName, $password, $passwordR) !== false){
+        header("location: SignUp.php?error=emptyinput");
+        exit();
+    }
+    if (invalidUid($uName) !== false) {
+        header("location: SignUp.php?error=invalidUsername");
+        exit();
+    }
+    if (invalidEmail($email) !== false) {
+        header("location: SignUp.php?error=invalidEmail");
+        exit();
+    }
+    if (pwdMatch($password, $passwordR) !== false) {
+        header("location: SignUp.php?error=passwordsdontmatch");
+        exit();
+    }
+    if (uidExists($conn, $uName) !== false){
+        header("location: SignUp.php?error=username");
+        exit();
+    }
 
-        <label><b>Volledige naam</b></label>
-        <input type="text" id="naam" name="vNaam">
 
-        <label><b>Wachtwoord</b></label>
-        <input type="password" name="psw">
-
-        <label><b>Herhaal wachtwoord</b></label>
-        <input type="password" name="pswr">
-
-        <button type="submit" name="submit">Registreer</button>
-        <button type="button" class="inlogbtn" onclick="window.location.href='Accounts.html';" >Heb je al een account?</button>
-    </form>
-</div>
-
-</body>
-</html>
+    createUser($conn, $uName, $vName, $email, $password);
+    header("location: acounts.html");
+    exit();
+}
+else {
+    // header("location: SignUp.html?error=unknown");
+    exit();
+}

@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1"> 
     <meta charset="UTF-8">
     <title>Sign up</title>
     <link rel="stylesheet" href="Signup.css">
@@ -12,30 +11,24 @@
             <div class="Home"><a href="index.html">Home</a></div>
             <div class="Lijst"><a href="Lijsten.html" class="navdrop">Lijsten</a></div>
             <div class="Account"><a href="Accounts.html">Account</a></div>
-            
         </div>
     </header>
+    <form method="post" action="signup.php" class="container" class="container2">
+        <label><b>Gebruikersnaam</b></label>
+        <input type="text"  name="name">
 
-<div class="container2">
-    <label><b>Gebruikersnaam</b></label>
-    <input type="text" id="name" name="name">
+        <label><b>Email</b></label>
+        <input type="email"  name="email">
 
-    <label><b>Email</b></label>
-    <input type="text" id="email" name="email">
+        <label><b>Volledige naam</b></label>
+        <input type="text"  name="vNaam">
 
-    <label><b>Volledige naam</b></label>
-    <input type="text" id="naam" name="naam">
+        <label><b>Wachtwoord</b></label>
+        <input type="password" name="psw">
 
-    <label><b>Wachtwoord</b></label>
-    <input type="password" name="psw">
-
-    <label><b>Herhaal wachtwoord</b></label>
-    <input type="password" name="psw">
-
-    <button id="submit" onclick="window.location.href='index.html';">Registreer</button>
-    <button type="button" class="inlogbtn" onclick="window.location.href='Accounts.html';" >Heb je al een account?</button>
-
-</div>
-
+        <label><b>Herhaal wachtwoord</b></label>
+        <input type="password" name="pswr">
+        <button type="submit" name="submit">registreer</button>
+      </form>
 </body>
 </html>

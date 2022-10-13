@@ -74,6 +74,7 @@ button:hover {
     padding: 16px;
     width: 700px;
     margin-left: 28%;
+    border: 3px white solid;
 }
 
 span.psw {
