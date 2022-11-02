@@ -1,6 +1,6 @@
 <?php
 session_start();
-
+//looks for if the user is in the database ============================================================
 function emptyInputSignup($uName, $email, $vName, $password, $passwordR) {
     $result;
     if(empty($uName) || empty($email) || empty($vName) || empty($password) || empty($passwordR)) {
@@ -43,13 +43,13 @@ function pwdMatch($password, $passwordR) {
     }
     return $result;
 }
-
+// test function -------------------------------------------------------------------------------------
 function JSC($input){
     echo "<pre>";
     print_r($input);
     echo "</pre>";
 }
-
+// checks if the user exists ----------------------------------------------------------------------------------
 function uidExists($conn, $uName) {
     $sql = "SELECT * FROM users WHERE username = ?;";
     // $sql = "SELECT * FROM users WHERE username = ? OR username = ?;";
@@ -72,7 +72,7 @@ function uidExists($conn, $uName) {
     }
 
 }
-
+// create new user ====================================================================================
 function createUser($conn, $uName, $vName, $email, $password) {
     $sql = "INSERT INTO users (username, Naam, `e-mail`, password ) VALUES(?, ?, ?, ?);";
     $stmt = mysqli_stmt_init($conn);
@@ -102,7 +102,7 @@ function emptyInputLogin($uName, $password){
     return $result;
 }
 
-
+//login ----------------------------------------------------------------------------------------
 function loginUser($conn, $uName, $password) {
     $userexist;
     $userexist = uidExists($conn, $uName);

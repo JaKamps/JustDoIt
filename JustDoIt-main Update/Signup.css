@@ -124,7 +124,8 @@ span.psw {
 }
 
 .container2{
-    margin-top: 10%;
+    /* margin-top: 20%; */
+    top: 20%;
     padding: 16px;
     width: 700px;
     margin-left: 28%;
