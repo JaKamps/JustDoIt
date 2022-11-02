@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 function emptyInputSignup($uName, $email, $vName, $password, $passwordR) {
     $result;
@@ -55,7 +56,7 @@ function uidExists($conn, $uName) {
     $stmt = mysqli_stmt_init($conn);
 
     if (!mysqli_stmt_prepare($stmt, $sql)) {
-        // header("location: SignUp.html?error=stmtfailed");
+        header("location: SignUp.html?error=stmtfailed");
         exit();
     }
     mysqli_stmt_bind_param($stmt, "s", $uName,);
@@ -105,22 +106,21 @@ function emptyInputLogin($uName, $password){
 function loginUser($conn, $uName, $password) {
     $userexist;
     $userexist = uidExists($conn, $uName);
-    
+
     if ($userexist === false) {
-        header("location: /accounts.html?error=wronglogin");
+        header("location: /Accounts.html?error=wronglogin");
         exit();
     }
-
 
     $hashedpassword = $userexist["password"];
     $checkpassword = password_verify($password, $hashedpassword);
 
     if($checkpassword === false) {
-        header("location: /login.html?error=wronglogin");
+        header("location: /Accounts.html?error=wronglogin");
         exit();
     }
     else if($checkpassword === true) {
-        session_start();
+        
         $_SESSION["idUsers"] = $userexist["idUsers"];
         $_SESSION["username"] = $userexist["uName"];
         header("location: index.html");
